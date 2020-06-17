@@ -3,16 +3,19 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100%;
     width: 100%;
+    margin: auto;
 }
 
 /* Container for each individual row */
 .rowContainer {
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
+    max-width: 960px;
+    max-height: 960px;
     width: auto;
     height: auto;
+    margin:auto;
 }
 
 /* Div properties */
@@ -20,11 +23,27 @@
    background-color: #a0a5af;
    border: 1px solid #190217;
    color: black;
-   height:100px;
-   width:100px;
+   height:50px;
+   width:50px;
    margin: auto;
 }
 
 .etchedItem {
     background-color: #021719;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+#clearButton {
+    height: 50px;
+    width: 150px;
+    color: orange;
+    background-color: black;
 }

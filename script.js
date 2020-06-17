@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-const gridSize = 16;
+let gridSize = 16;
 let currentDivId = gridSize * gridSize;
 
 for (i = 0; i < gridSize; i++) {
@@ -17,8 +17,22 @@ for (i = 0; i < gridSize; i++) {
 }
 
 const divToColor = document.querySelectorAll('div');
+const removeColor = document.querySelectorAll('div');
 
 divToColor.forEach((div)  => {
-    div.addEventListener('mouseover', (e) =>
-    div.classList.toggle('etchedItem'));
+    if(div.classList.contains('rowItem')) {
+        div.addEventListener('mouseover', (e) =>
+        div.classList.toggle('etchedItem'));
+    }
+})
+
+const clearButton = document.querySelector('button');
+
+clearButton.addEventListener('click', (e) => {
+    removeColor.forEach((div) => {
+        if(div.classList.contains('etchedItem')) {
+            div.classList.remove('etchedItem');
+        }
+    })
+    gridSize = prompt('How big would you like your grid?', 16);
 })

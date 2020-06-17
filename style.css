@@ -1,24 +1,30 @@
+/* Large container for the whole page */
 #container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
 
+/* Container for each individual row */
 .rowContainer {
     flex-direction: row;
     justify-content: start;
+    width: auto;
+    height: auto;
 }
 
-.row {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   background-color: #f30404;
-   border: 1px solid black;
+/* Div properties */
+.rowItem {
+   background-color: #a0a5af;
+   border: 1px solid #190217;
    color: black;
    height:100px;
    width:100px;
    margin: auto;
+}
+
+.rowItem:hover {
+    background-color: #021719;
 }

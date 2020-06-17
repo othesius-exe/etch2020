@@ -16,6 +16,9 @@ for (i = 0; i < gridSize; i++) {
     }
 }
 
-window.addEventListener('mouseOver', function() { 
-    
+const divToColor = document.querySelectorAll('div');
+
+divToColor.forEach((div)  => {
+    div.addEventListener('mouseover', (e) =>
+    div.classList.toggle('etchedItem'));
 })

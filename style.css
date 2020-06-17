@@ -25,6 +25,6 @@
    margin: auto;
 }
 
-.rowItem:hover {
+.etchedItem {
     background-color: #021719;
 }
